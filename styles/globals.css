@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: 'Inter', sans-serif;
+}
+
+:root {
+	--primary-color: #e15f41;
+	--primary-hover-color: #e77f67;
+	--primary-disabled-color: #e77f67;
+	--secondary-color: #1243b0;
+	--secondary-hover-color: #4c82fc;
+	--secondary-disabled-color: #4c82fc;
+	--success-color: #00997a;
+	--success-hover-color: #00b894;
+	--success-disabled-color: #00b894;
+	--danger-color: #ff3838;
+	--danger-hover-color: #fd7272;
+	--danger-disabled-color: #fd7272;
+	--info-color: #17c0eb;
+	--info-hover-color: #18dcff;
+	--info-disabled-color: #18dcff;
+	--warning-color: #ff9f1a;
+	--warning-hover-color: #ffaf40;
+	--warning-disabled-color: #ffaf40;
+	--border-radius: 15px;
+	--topnav-height: 110px;
+	--transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@layer utilities {
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+}
+
+.main-document {
+	background: linear-gradient(
+		180deg,
+		rgba(122, 209, 35, 0.1) 0%,
+		rgba(226, 226, 226, 0) 100%
+	);
+	min-height: 100vh;
+	background-size: cover;
+}
+
+.tile {
+	@apply relative flex flex-col min-w-0 break-words w-full mb-6 shadow-md rounded-lg bg-white p-6;
+}
+
+.card-social-media {
+	@apply px-2.5 py-2.5 rounded-xl text-2xl bg-white shadow-3xl cursor-pointer hover:bg-gray-50 transition;
+}
+
+.link {
+	@apply text-blue-500 underline font-bold cursor-pointer hover:text-blue-700 transition;
+}
+
+.required {
+	@apply text-red-500 font-bold;
+}
+
+/* =================== BUTTONS ================= */
+
+.btn-group {
+	@apply flex items-center space-x-2;
+}
+
+.btn,
+.btn-sm {
+	@apply font-medium inline-flex gap-2 items-center justify-center border border-transparent shadow rounded leading-snug transition duration-150 ease-in-out cursor-pointer;
+}
+
+.btn {
+	@apply px-8 py-3 text-sm;
+}
+
+.btn-sm {
+	@apply lg:px-3 lg:py-2 px-2 py-1.5 text-xs;
+}
+
+.btn-default {
+	@apply bg-white border border-white hover:bg-gray-50;
+}
+
+.btn-primary {
+	@apply hover:bg-primaryHover text-white shadow bg-primary;
+}
+
+.btn-secondary {
+	@apply bg-blue-500 hover:bg-blue-600 text-white;
+}
+
+.btn-danger {
+	@apply bg-red-500 hover:bg-red-600 text-white;
+}
+
+.btn-info {
+	@apply bg-blue-500 hover:bg-blue-600 text-white;
+}
+
+.btn-success {
+	@apply bg-teal-600 hover:bg-teal-700 text-white;
+}
+
+.btn-warning {
+	@apply bg-yellow-500 hover:bg-yellow-600 text-black;
+}
+
+.btn-outline-primary {
+	@apply border border-primary hover:bg-primary hover:text-white;
+}
+
+.btn-outline-info {
+	@apply border border-blue-500 hover:bg-blue-500 hover:text-white;
+}
+
+.btn-outline-success {
+	@apply border border-teal-600 hover:bg-teal-700 hover:text-white;
+}
+
+.btn-outline-danger {
+	@apply border-red-600 hover:bg-red-600 hover:text-white;
+}
+
+/* INPUTS */
+
+.form-control {
+	@apply bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-4 outline-0;
+}
+
+.form-control-sm {
+	@apply p-2;
+}
+
+.form-control-success {
+	@apply border-green-500;
+}
+
+.form-control-error {
+	@apply border-red-500;
+}
+
+.form-group {
+	@apply mb-3;
+}
+
+.label-input {
+	@apply text-sm mb-0.5 font-bold;
+}
+
+/* BADGES */
+
+.badge {
+	@apply rounded-full px-1.5 py-1 text-xs;
+}
+
+.badge-primary {
+	@apply text-white bg-primary;
+}
+
+.badge-success {
+	@apply text-white bg-success;
+}
+
+.badge-info {
+	@apply text-white bg-info;
+}
+
+.badge-danger {
+	@apply text-white bg-danger;
+}
+
+.badge-warning {
+	@apply text-black bg-warning;
+}
+
+/* TABLES */
+
+.table-container {
+	@apply overflow-x-auto relative rounded-lg shadow-md;
+}
+
+.table {
+	@apply w-full text-sm text-left text-gray-900;
+}
+
+.table thead {
+	@apply text-xs text-gray-800 uppercase;
+}
+
+.table thead tr th {
+	@apply py-3 px-6;
+}
+
+.table thead tr th:nth-child(odd) {
+	@apply bg-gray-50;
+}
+
+.table tbody tr {
+	@apply border-b border-gray-200;
+}
+.table tbody tr:last-child {
+	@apply border-0;
+}
+
+.table tbody tr td {
+	@apply py-4 px-6;
+}
+
+.table tbody tr td:first-child {
+	@apply font-medium text-gray-900 whitespace-nowrap;
+}
+
+.table tbody tr td:nth-child(odd) {
+	@apply bg-gray-50;
+}
